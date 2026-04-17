@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FadeIn, Stagger, HoverLift, fadeUp } from '@/components/MotionPrimitives';
+import { FadeIn, fadeUp } from '@/components/MotionPrimitives';
 
 const services = [
   {
@@ -66,9 +66,9 @@ const Services = () => {
       {/* Services */}
       <section style={{ padding: 'var(--spacing-3xl) 0' }}>
         <div className="container" style={{ maxWidth: '1200px' }}>
-          <Stagger stagger={0.1} className="flex flex-col" style={{ gap: 'var(--spacing-3xl)' }}>
+          <div className="flex flex-col" style={{ gap: 'var(--spacing-3xl)' }}>
             {services.map((service, idx) => (
-              <HoverLift key={service.id}>
+              <FadeIn key={service.id} delay={idx * 0.1}>
                 <div id={service.id} style={{ backgroundColor: 'var(--card)', borderRadius: '8px', border: '1px solid var(--border)', overflow: 'hidden' }}>
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Info Side */}
@@ -111,9 +111,9 @@ const Services = () => {
                     </div>
                   </div>
                 </div>
-              </HoverLift>
+              </FadeIn>
             ))}
-          </Stagger>
+          </div>
         </div>
       </section>
 
