@@ -46,7 +46,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 'var(--spacing-3xl)' }}>
 
             {/* Left: Contact Info */}
-            <FadeIn>
+            <FadeIn style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-sm)' }}>
                 联系方式
               </div>
@@ -76,6 +76,19 @@ const Contact = () => {
                     <div className="font-semibold" style={{ fontSize: 'var(--font-size-body)', color: 'var(--brand-navy)', fontFamily: 'var(--font-serif)' }}>{item.value}</div>
                   </a>
                 ))}
+              </div>
+
+              {/* Quick Action — flex:1 to stretch */}
+              <div style={{ background: 'linear-gradient(135deg, var(--brand-navy) 0%, #001a4d 100%)', borderRadius: '8px', padding: 'var(--spacing-2xl)', textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'white', marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>
+                  专业咨询，即刻开始
+                </h3>
+                <p style={{ fontSize: 'var(--font-size-label)', color: 'rgba(255,255,255,0.70)', marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)' }}>
+                  无论您需要审计、评估还是税务服务，一通电话即可获得专业指导
+                </p>
+                <a href="tel:057683886633" className="pill-btn inline-block" style={{ backgroundColor: 'var(--brand-gold)', color: 'white', fontSize: 'var(--font-size-label)', fontWeight: 700, border: 'none' }}>
+                  立即咨询
+                </a>
               </div>
 
             </FadeIn>
@@ -137,22 +150,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Quick Action */}
-              <div style={{ marginTop: 'var(--spacing-xl)', background: 'linear-gradient(135deg, var(--brand-navy) 0%, #001a4d 100%)', borderRadius: '8px', padding: 'var(--spacing-2xl)', textAlign: 'center' }}>
-                <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'white', marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>
-                  专业咨询，即刻开始
-                </h3>
-                <p style={{ fontSize: 'var(--font-size-label)', color: 'rgba(255,255,255,0.70)', marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)' }}>
-                  无论您需要审计、评估还是税务服务，一通电话即可获得专业指导
-                </p>
-                <div style={{ fontSize: 'var(--font-size-body)', color: 'var(--brand-gold)', fontWeight: 700, fontFamily: 'var(--font-serif)', marginBottom: 'var(--spacing-md)' }}>
-                  政府网短号：660187
-                </div>
-                <a href="tel:660187" className="pill-btn inline-block" style={{ backgroundColor: 'var(--brand-gold)', color: 'var(--brand-navy)', fontSize: 'var(--font-size-label)', fontWeight: 700, border: 'none' }}>
-                  拨打 660187
-                </a>
-              </div>
             </FadeIn>
           </div>
         </div>
@@ -174,7 +171,7 @@ const Contact = () => {
               { step: '04', title: '交付成果', desc: '按约定时间交付报告，提供后续跟踪支持' },
             ].map((item) => (
               <HoverLift key={item.step}>
-                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', textAlign: 'center' }}>
+                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', textAlign: 'center', height: '100%' }}>
                   <div style={{ fontSize: '2rem', color: 'var(--brand-gold)', fontWeight: 700, fontFamily: 'var(--font-serif)', marginBottom: 'var(--spacing-sm)' }}>{item.step}</div>
                   <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-xs)', fontFamily: 'var(--font-serif)' }}>{item.title}</h3>
                   <p style={{ fontSize: 'var(--font-size-small)', color: 'var(--muted-foreground)', lineHeight: 1.6 }}>{item.desc}</p>

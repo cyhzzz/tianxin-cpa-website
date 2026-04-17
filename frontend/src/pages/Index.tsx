@@ -39,7 +39,7 @@ const Index = () => {
         <div className="container relative" style={{ maxWidth: '1200px', paddingTop: '120px', paddingBottom: '100px' }}>
           <FadeIn variants={fadeUp} style={{ maxWidth: '700px' }}>
             <div className="flex items-center" style={{ gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-xl)' }}>
-              <img src="./assets/logo.svg" alt="天信" style={{ height: '56px', width: '56px' }} />
+              <img src="./assets/logo.svg" alt="天信" style={{ height: '56px', width: '56px', filter: 'brightness(0) invert(1)' }} />
               <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em' }}>EST. 2001 · ZHEJIANG</div>
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', color: 'oklch(0.97 0.005 250)', lineHeight: 1.15, marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)', fontWeight: 600, letterSpacing: '-0.01em' }}>
@@ -63,7 +63,7 @@ const Index = () => {
       <section style={{ backgroundColor: 'var(--brand-ice)', padding: 'var(--spacing-2xl) 0', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '1200px' }}>
           <Stagger stagger={0.1} className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 'var(--spacing-xl)' }}>
-            {[{ n: '27', s: '年', l: '行业积淀' }, { n: '8', s: '名', l: '注册会计师' }, { n: '500', s: '㎡', l: '办公场地' }, { n: '6', s: '大', l: '业务领域' }].map((s) => (
+            {[{ n: '27', s: '年', l: '行业积淀' }, { n: '8', s: '名', l: '注册会计师' }, { n: '30+', s: '名', l: '专业队伍' }, { n: '6', s: '大', l: '业务领域' }].map((s) => (
               <HoverLift key={s.l} className="text-center">
                 <div className="font-bold stat-number" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--brand-navy)', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>
                   {s.n}<span style={{ color: 'var(--brand-gold)', fontSize: '0.7em' }}>{s.s}</span>
@@ -86,7 +86,7 @@ const Index = () => {
           <Stagger stagger={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: 'var(--spacing-lg)' }}>
             {services.map((s) => (
               <HoverLift key={s.title}>
-                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)' }}>
+                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', height: '100%' }}>
                   <div style={{ fontSize: '10px', color: 'var(--brand-blue)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>{s.tag}</div>
                   <div style={{ fontSize: '2rem', marginBottom: 'var(--spacing-md)' }}>{s.icon}</div>
                   <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-sm)', fontFamily: 'var(--font-serif)' }}>{s.title}</h3>

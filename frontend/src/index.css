@@ -283,7 +283,7 @@
 
 .pill-btn-gold {
   background: var(--brand-gold);
-  color: oklch(0.15 0.02 250);
+  color: white;
   border: none;
 }
 .pill-btn-gold:hover {
@@ -300,6 +300,11 @@
   border-color: var(--brand-blue);
   box-shadow: 0 8px 32px oklch(0.30 0.12 260 / 0.08);
   transform: translateY(-4px);
+}
+
+/* Grid equal-height cards */
+.grid > div {
+  height: 100%;
 }
 
 /* Stat number animation */

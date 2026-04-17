@@ -11,9 +11,9 @@ const timeline = [
 ];
 
 const qualifications = [
-  '注册会计师业务许可',
-  '代理记账许可资质',
-  '台州市行政审批中介服务网入驻',
+  { name: '注册会计师业务许可', icon: '📋' },
+  { name: '代理记账许可资质', icon: '📒' },
+  { name: '台州市行政审批中介服务网入驻', icon: '🏛️' },
 ];
 
 const licensedItems = ['注册会计师业务', '代理记账'];
@@ -84,15 +84,12 @@ const About = () => {
                 <div className="flex flex-col" style={{ gap: 'var(--spacing-md)' }}>
                   {[
                     { label: '全称', value: '天台天信会计师事务所有限公司' },
-                    { label: '类型', value: '有限责任公司（自然人投资控股）' },
                     { label: '前身', value: '1999年7月' },
                     { label: '正式注册', value: '2001年4月17日' },
                     { label: '法定代表人', value: '彭庆岳' },
-                    { label: '注册资本', value: '30万元（实缴30万元）' },
                     { label: '专业人员', value: '30+人' },
                     { label: '执业注会', value: '8人' },
                     { label: '中高级职称', value: '15人' },
-                    { label: '办公面积', value: '500㎡（自有）' },
                     { label: '关联企业', value: '天台万信税务师事务所' },
                     { label: '地址', value: '浙江省天台县赤城大厦5楼' },
                     { label: '电话', value: '0576-83886633' },
@@ -150,8 +147,8 @@ const About = () => {
             <div className="section-divider" style={{ margin: 'var(--spacing-md) auto 0' }} />
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 'var(--spacing-xl)' }}>
-            <FadeIn>
-              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)' }}>
+            <FadeIn style={{ height: '100%' }}>
+              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)', height: '100%' }}>
                 <div style={{ fontSize: '10px', color: 'var(--brand-navy)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>LICENSED BUSINESS</div>
                 <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>许可项目</h3>
                 <div className="flex flex-col" style={{ gap: 'var(--spacing-sm)' }}>
@@ -164,8 +161,8 @@ const About = () => {
                 </div>
               </div>
             </FadeIn>
-            <FadeIn variants={fadeUp} delay={0.15}>
-              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)' }}>
+            <FadeIn variants={fadeUp} delay={0.15} style={{ height: '100%' }}>
+              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)', height: '100%' }}>
                 <div style={{ fontSize: '10px', color: 'var(--brand-blue)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>GENERAL BUSINESS</div>
                 <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>一般项目</h3>
                 <div className="grid grid-cols-2" style={{ gap: 'var(--spacing-sm)' }}>
@@ -194,27 +191,38 @@ const About = () => {
           {/* Executive Leadership */}
           <FadeIn style={{ marginBottom: 'var(--spacing-3xl)' }}>
             <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-lg)', textAlign: 'center' }}>EXECUTIVE LEADERSHIP</div>
-            <Stagger stagger={0.12} className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 'var(--spacing-xl)' }}>
+            <Stagger stagger={0.12} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: 'var(--spacing-lg)' }}>
               {[
-                { name: '彭庆岳', title: '主任会计师 · 董事长', role: '法定代表人', desc: '创始人之一，资深注册会计师，全面负责事务所执业质量与战略发展方向', share: '持股27.5%', accent: 'var(--brand-navy)' },
-                { name: '庞晓群', title: '股东 · 项目负责人', role: '核心合伙人', desc: '事务所大股东，深耕审计领域多年，主持多项政府审计与国企审计项目', share: '持股41%', accent: 'var(--brand-navy)' },
-                { name: '陈辛宏', title: '股东 · 项目联系人', role: '核心合伙人', desc: '关联7家企业，参与多项政府框架协议项目对接与业务拓展', share: '持股27.5%', accent: 'var(--brand-navy)' },
+                { name: '彭庆岳', title: '注册会计师', role: '法定代表人 · 董事长', desc: '创始人之一，全面负责事务所执业质量与战略发展方向' },
+                { name: '庞晓群', title: '注册会计师', role: '创始人 · 大股东', desc: '深耕审计领域多年，主持多项政府审计与国企审计项目' },
+                { name: '陈辛宏', title: '注册会计师', role: '联合创始人 · 核心合伙人', desc: '参与多项政府框架协议项目对接与业务拓展' },
+                { name: '王红兵', title: '注册会计师', role: '核心合伙人', desc: '负责审计项目质量复核与团队管理' },
               ].map((exec) => (
                 <HoverLift key={exec.name}>
-                  <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', border: '1px solid var(--border)', overflow: 'hidden' }}>
-                    <div style={{ background: 'linear-gradient(135deg, var(--brand-navy) 0%, oklch(0.24 0.10 255) 100%)', padding: 'var(--spacing-xl) var(--spacing-xl) var(--spacing-lg)', textAlign: 'center', position: 'relative' }}>
-                      <div style={{ width: '64px', height: '64px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto var(--spacing-sm)', fontSize: '1.5rem', color: 'oklch(0.97 0.005 250)', fontFamily: 'var(--font-serif)', fontWeight: 700 }}>
-                        {exec.name.charAt(0)}
+                  <div style={{ backgroundColor: 'white', borderRadius: '8px', border: '1px solid var(--border)', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,35,102,0.06)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    {/* Navy header with white logo */}
+                    <div style={{ background: 'var(--brand-navy)', padding: 'var(--spacing-lg) var(--spacing-xl)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div>
+                        <div style={{ fontSize: '16px', fontWeight: 600, color: 'oklch(0.97 0.005 250)', letterSpacing: '0.08em', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>
+                          天台天信
+                        </div>
+                        <div style={{ fontSize: '9px', color: 'var(--brand-gold)', letterSpacing: '0.12em', marginTop: '3px', fontWeight: 400 }}>
+                          TIANXIN CPA
+                        </div>
                       </div>
-                      <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'oklch(0.97 0.005 250)', fontFamily: 'var(--font-serif)', marginBottom: '4px' }}>{exec.name}</h3>
-                      <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 500 }}>{exec.title}</div>
+                      <img src="./assets/logo.svg" alt="天信" style={{ height: '32px', width: '32px', filter: 'brightness(0) invert(1)', opacity: 0.6 }} />
                     </div>
-                    <div style={{ padding: 'var(--spacing-lg) var(--spacing-xl)' }}>
-                      <div className="flex items-center justify-between" style={{ marginBottom: 'var(--spacing-md)', paddingBottom: 'var(--spacing-sm)', borderBottom: '1px solid var(--border)' }}>
-                        <span style={{ fontSize: 'var(--font-size-small)', color: 'var(--muted-foreground)' }}>{exec.role}</span>
-                        <span style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-navy)', fontWeight: 600, backgroundColor: 'var(--brand-ice)', padding: '2px 10px', borderRadius: '56px' }}>{exec.share}</span>
+                    {/* Name & title section */}
+                    <div style={{ padding: 'var(--spacing-xl) var(--spacing-xl) var(--spacing-md)' }}>
+                      <div style={{ borderTop: '1px solid var(--border)', paddingTop: 'var(--spacing-lg)' }}>
+                        <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand-navy)', letterSpacing: '0.06em', fontFamily: 'var(--font-serif)', marginBottom: '4px' }}>{exec.name}</h3>
+                        <div style={{ fontSize: '11px', color: 'var(--brand-blue)', fontWeight: 500, letterSpacing: '0.04em' }}>{exec.title}</div>
                       </div>
-                      <p style={{ fontSize: 'var(--font-size-label)', color: 'var(--muted-foreground)', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>{exec.desc}</p>
+                    </div>
+                    {/* Role & description */}
+                    <div style={{ padding: '0 var(--spacing-xl) var(--spacing-xl)', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                      <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.1em', marginBottom: 'var(--spacing-sm)' }}>{exec.role}</div>
+                      <p style={{ fontSize: 'var(--font-size-label)', color: 'var(--muted-foreground)', lineHeight: 1.7, fontFamily: 'var(--font-serif)', flex: 1 }}>{exec.desc}</p>
                     </div>
                   </div>
                 </HoverLift>
@@ -237,7 +245,7 @@ const About = () => {
               { role: '行政部', name: '行政支持', desc: '负责客户接待、档案管理、质量控制和持续教育', icon: '📁' },
             ].map((member) => (
               <HoverLift key={member.role}>
-                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', textAlign: 'center' }}>
+                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', textAlign: 'center', height: '100%' }}>
                   <div style={{ fontSize: '2rem', marginBottom: 'var(--spacing-sm)' }}>{member.icon}</div>
                   <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '4px' }}>{member.role}</div>
                   <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-xs)', fontFamily: 'var(--font-serif)' }}>{member.name}</h3>
@@ -263,21 +271,21 @@ const About = () => {
           </FadeIn>
           <Stagger stagger={0.1} className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 'var(--spacing-lg)' }}>
             <HoverLift>
-              <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid rgba(255,255,255,0.08)', height: '100%' }}>
                 <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>CREDIT RATING</div>
                 <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'oklch(0.97 0.005 250)', marginBottom: 'var(--spacing-sm)', fontFamily: 'var(--font-serif)' }}>🏅 AAA级企业诚信</h3>
                 <p style={{ fontSize: 'var(--font-size-label)', color: 'oklch(0.65 0.01 250)', lineHeight: 1.8 }}>政府采购大数据征信评定为AAA级，诚信分100分（满分），严重违法失信记录0条，行政处罚0条。</p>
               </div>
             </HoverLift>
             <HoverLift>
-              <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid rgba(255,255,255,0.08)', height: '100%' }}>
                 <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>QUALITY RECOGNITION</div>
                 <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'oklch(0.97 0.005 250)', marginBottom: 'var(--spacing-sm)', fontFamily: 'var(--font-serif)' }}>⭐ 多项优质评级</h3>
                 <p style={{ fontSize: 'var(--font-size-label)', color: 'oklch(0.65 0.01 250)', lineHeight: 1.8 }}>获成长力、管理创新力、竞争力、履约率、服务质量等大数据"优质"评级。</p>
               </div>
             </HoverLift>
             <HoverLift>
-              <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid rgba(255,255,255,0.08)', height: '100%' }}>
                 <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>GOVERNMENT FRAMEWORK</div>
                 <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'oklch(0.97 0.005 250)', marginBottom: 'var(--spacing-sm)', fontFamily: 'var(--font-serif)' }}>📋 框架协议入围</h3>
                 <p style={{ fontSize: 'var(--font-size-label)', color: 'oklch(0.65 0.01 250)', lineHeight: 1.8 }}>入围2025-2026年度天台县会计审计、预算绩效评价咨询服务框架协议采购项目。</p>
@@ -301,13 +309,13 @@ const About = () => {
           </FadeIn>
           <Stagger stagger={0.1} className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5" style={{ gap: 'var(--spacing-md)' }}>
             {qualifications.map((q) => (
-              <HoverLift key={q}>
-                <div className="text-center" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', border: '1px solid var(--border)' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--brand-navy)', opacity: 0.08, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto var(--spacing-sm)', fontSize: '1.25rem', color: 'var(--brand-navy)' }}>
-                    ✓
+              <HoverLift key={q.name}>
+                <div className="text-center" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', border: '1px solid var(--border)', height: '100%' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--brand-ice)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto var(--spacing-sm)', fontSize: '1.5rem' }}>
+                    {q.icon}
                   </div>
                   <div className="font-medium" style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-navy)', fontFamily: 'var(--font-serif)' }}>
-                    {q}
+                    {q.name}
                   </div>
                 </div>
               </HoverLift>
