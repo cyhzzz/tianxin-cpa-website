@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { FadeIn } from '@/components/MotionPrimitives';
 
 const navLinks = [
   { to: '/', label: '首页' },
@@ -17,9 +16,8 @@ const Navbar = () => {
 
   return (
     <>
-      <FadeIn variants={{ hidden: { opacity: 0, y: -16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}>
-        <header className="sticky top-0 z-50" style={{ backgroundColor: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', borderBottom: '1px solid var(--border)', position: 'sticky', top: 0, zIndex: 50 }}>
-          <div className="container" style={{ maxWidth: '1200px' }}>
+      <header className="sticky top-0 z-50" style={{ backgroundColor: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', borderBottom: '1px solid var(--border)' }}>
+        <div className="container" style={{ maxWidth: '1200px' }}>
             <nav className="flex items-center justify-between" style={{ height: '68px' }}>
               <Link to="/" className="flex items-center" style={{ gap: 'var(--spacing-sm)' }}>
                 <img src="./assets/logo.svg" alt="天信" style={{ height: '36px', width: '36px' }} />
@@ -68,7 +66,6 @@ const Navbar = () => {
             )}
           </div>
         </header>
-      </FadeIn>
 
       {/* Contact Dropdown Panel */}
       {contactOpen && (
