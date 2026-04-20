@@ -116,38 +116,38 @@
   --destructive: #da1e28;
   --border: #e0e0e0;
   --input: #e0e0e0;
-  --ring: #0f62fe;
+  --ring: #4589ff;
   --success: #24a148;
   --success-foreground: #ffffff;
   --warning: #b8860b;
   --warning-foreground: #161616;
-  --info: #0f62fe;
+  --info: #4589ff;
   --info-foreground: #ffffff;
   --theme-red: #da1e28;
   --theme-green: #24a148;
   --theme-gold: #b8860b;
-  --theme-blue: #0f62fe;
+  --theme-blue: #4589ff;
 
   --brand-navy: #00338d;
-  --brand-blue: #0f62fe;
+  --brand-blue: #4589ff;
   --brand-sky: #4589ff;
   --brand-gold: #b8860b;
   --brand-ice: #f4f4f4;
 
   --chart-1: #00338d;
-  --chart-2: #0f62fe;
+  --chart-2: #4589ff;
   --chart-3: #4589ff;
   --chart-4: #b8860b;
   --chart-5: #525252;
 
   --sidebar: #161616;
   --sidebar-foreground: #f4f4f4;
-  --sidebar-primary: #0f62fe;
+  --sidebar-primary: #4589ff;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #262626;
   --sidebar-accent-foreground: #f4f4f4;
   --sidebar-border: #393939;
-  --sidebar-ring: #0f62fe;
+  --sidebar-ring: #4589ff;
   --hero: #161616;
   --hero-foreground: #ffffff;
 }
@@ -280,7 +280,7 @@
 }
 .tag-blue {
   background: #edf5ff;
-  color: #0f62fe;
+  color: #4589ff;
 }
 .tag-gold {
   background: #fef7e0;
