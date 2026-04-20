@@ -1,4 +1,5 @@
 import path from "path"
+import fs from "fs"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react-swc"
 import {defineConfig} from "vite"
@@ -6,7 +7,29 @@ import process from "process"
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(), 
+    tailwindcss(),
+    {
+      name: 'copy-static-files',
+      closeBundle() {
+        // 复制根目录的 CNAME、sitemap.xml 和 robots.txt 到 dist 目录
+        const filesToCopy = ['CNAME', 'sitemap.xml', 'robots.txt'];
+        const rootDir = path.resolve(__dirname, '..');
+        const distDir = path.resolve(__dirname, 'dist');
+        
+        filesToCopy.forEach(file => {
+          const src = path.join(rootDir, file);
+          const dest = path.join(distDir, file);
+          
+          if (fs.existsSync(src)) {
+            fs.copyFileSync(src, dest);
+            console.log(`✓ Copied ${file} to dist/`);
+          }
+        });
+      }
+    }
+  ],
   base: './',
   resolve: {
     alias: {
