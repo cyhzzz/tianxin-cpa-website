@@ -63,7 +63,7 @@ const Index = () => {
       <section style={{ backgroundColor: 'var(--brand-ice)', padding: 'var(--spacing-2xl) 0', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '1200px' }}>
           <Stagger stagger={0.1} className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 'var(--spacing-xl)' }}>
-            {[{ n: '27', s: '年', l: '行业积淀' }, { n: '8', s: '名', l: '注册会计师' }, { n: '30+', s: '名', l: '专业队伍' }, { n: '6', s: '大', l: '业务领域' }].map((s) => (
+            {[{ n: '27', s: '年', l: '行业积淀' }, { n: '7', s: '名', l: '注册会计师' }, { n: '30+', s: '名', l: '专业队伍' }, { n: '6', s: '大', l: '业务领域' }].map((s) => (
               <HoverLift key={s.l} className="text-center">
                 <div className="font-semibold stat-number" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--brand-navy)', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>
                   {s.n}<span style={{ color: 'var(--brand-gold)', fontSize: '0.7em' }}>{s.s}</span>
