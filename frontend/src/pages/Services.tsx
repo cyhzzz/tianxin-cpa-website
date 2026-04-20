@@ -69,25 +69,25 @@ const Services = () => {
           <div className="flex flex-col" style={{ gap: 'var(--spacing-3xl)' }}>
             {services.map((service, idx) => (
               <FadeIn key={service.id} delay={idx * 0.1}>
-                <div id={service.id} style={{ backgroundColor: 'var(--card)', borderRadius: '8px', border: '1px solid var(--border)', overflow: 'hidden' }}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2" style={{ height: '100%' }}>
+                <div id={service.id} style={{ backgroundColor: 'var(--card)', borderRadius: '0px', border: '1px solid var(--border)', overflow: 'hidden' }}>
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Info Side */}
-                    <div style={{ padding: 'var(--spacing-2xl)', order: idx % 2 === 0 ? 1 : 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
+                    <div style={{ padding: 'var(--spacing-2xl)', order: idx % 2 === 0 ? 1 : 2 }}>
                       <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>{service.subtitle}</div>
                       <div style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-md)' }}>{service.icon}</div>
                       <h2 className="font-semibold" style={{ fontSize: 'var(--font-size-headline)', color: 'var(--brand-navy)', lineHeight: 1.2, marginBottom: 'var(--spacing-xs)', fontFamily: 'var(--font-serif)' }}>{service.title}</h2>
                       <div className="section-divider" style={{ margin: 'var(--spacing-md) auto 0', marginLeft: 0 }} />
                       <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--muted-foreground)', lineHeight: 1.8, marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)' }}>{service.desc}</p>
                       {/* Local note */}
-                      <div style={{ backgroundColor: 'var(--brand-ice)', borderRadius: '6px', padding: 'var(--spacing-md)', marginBottom: 'var(--spacing-lg)' }}>
-                        <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '4px' }}>TIANXIN ADVANTAGE</div>
-                        <p style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-navy)', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>{service.localNote}</p>
+                      <div style={{ backgroundColor: '#f4f4f4', borderRadius: '0px', padding: 'var(--spacing-md)', marginBottom: 'var(--spacing-lg)' }}>
+                        <div style={{ fontSize: '10px', color: 'var(--brand-navy)', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '4px', textTransform: 'uppercase' }}>TIANXIN ADVANTAGE</div>
+                        <p style={{ fontSize: 'var(--font-size-small)', color: '#525252', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>{service.localNote}</p>
                       </div>
-                      <Link to="/contact" className="pill-btn pill-btn-primary inline-block" style={{ fontSize: 'var(--font-size-label)', marginTop: 'auto' }}>联系我们</Link>
+                      <Link to="/contact" className="pill-btn pill-btn-primary inline-block" style={{ fontSize: 'var(--font-size-label)' }}>联系我们</Link>
                     </div>
 
                     {/* Features + Process Side */}
-                    <div style={{ padding: 'var(--spacing-2xl)', backgroundColor: 'var(--brand-ice)', order: idx % 2 === 0 ? 2 : 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
+                    <div style={{ padding: 'var(--spacing-2xl)', backgroundColor: '#f4f4f4', order: idx % 2 === 0 ? 2 : 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                       <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-lg)', letterSpacing: '0.1em', fontFamily: 'var(--font-serif)' }}>服务内容</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-xl)' }}>
                         {service.features.map((feature) => (

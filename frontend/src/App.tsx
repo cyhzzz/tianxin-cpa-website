@@ -49,8 +49,8 @@ function App() {
             <Footer />
             {/* Mobile floating CTA */}
             <div className="md:hidden" style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 50, backgroundColor: 'var(--brand-navy)', borderTop: '1px solid rgba(255,255,255,0.1)', padding: '10px 16px', display: 'flex', gap: '8px' }}>
-              <a href="tel:13958503261" style={{ flex: 1, textAlign: 'center', backgroundColor: 'var(--brand-gold)', color: 'var(--brand-navy)', padding: '10px 0', borderRadius: '4px', fontWeight: 700, fontSize: '14px', textDecoration: 'none', fontFamily: 'var(--font-serif)' }}>📱 手机咨询</a>
-              <a href="tel:057683886633" style={{ flex: 1, textAlign: 'center', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', padding: '10px 0', borderRadius: '4px', fontWeight: 600, fontSize: '14px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', fontFamily: 'var(--font-serif)' }}>☎️ 座机咨询</a>
+              <a href="tel:13958503261" style={{ flex: 1, textAlign: 'center', backgroundColor: 'var(--brand-gold)', color: 'var(--brand-navy)', padding: '10px 0', borderRadius: '0px', fontWeight: 600, fontSize: '14px', textDecoration: 'none', fontFamily: 'var(--font-serif)' }}>📱 手机咨询</a>
+              <a href="tel:057683886633" style={{ flex: 1, textAlign: 'center', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', padding: '10px 0', borderRadius: '0px', fontWeight: 600, fontSize: '14px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', fontFamily: 'var(--font-serif)' }}>☎️ 座机咨询</a>
             </div>
           </div>
         </HashRouter>

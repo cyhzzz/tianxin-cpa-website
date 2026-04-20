@@ -42,12 +42,12 @@ const Index = () => {
               <img src="./assets/logo.svg" alt="天信" style={{ height: '48px', width: '48px', filter: 'brightness(0) invert(1)' }} />
               <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em' }}>EST. 2001 · ZHEJIANG</div>
             </div>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', color: 'oklch(0.97 0.005 250)', lineHeight: 1.15, marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)', fontWeight: 600, letterSpacing: '-0.01em' }}>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', color: '#ffffff', lineHeight: 1.15, marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)', fontWeight: 600, letterSpacing: '-0.01em' }}>
               诚信为本
               <br />
-              <span className="gold-underline" style={{ color: 'oklch(0.97 0.005 250)' }}>操守为重</span>
+              <span className="gold-underline" style={{ color: '#ffffff' }}>操守为重</span>
             </h1>
-            <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.2rem)', color: 'oklch(0.72 0.01 250)', lineHeight: 1.8, marginBottom: 'var(--spacing-2xl)', fontWeight: 300 }}>
+            <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.2rem)', color: 'rgba(255,255,255,0.70)', lineHeight: 1.8, marginBottom: 'var(--spacing-2xl)', fontWeight: 300 }}>
               天台县唯一具有独立法人资格的会计审计专业机构，
               <br />深耕天台二十七载，以质量求信誉，以信誉求发展。
             </p>
@@ -65,7 +65,7 @@ const Index = () => {
           <Stagger stagger={0.1} className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 'var(--spacing-xl)' }}>
             {[{ n: '27', s: '年', l: '行业积淀' }, { n: '8', s: '名', l: '注册会计师' }, { n: '30+', s: '名', l: '专业队伍' }, { n: '6', s: '大', l: '业务领域' }].map((s) => (
               <HoverLift key={s.l} className="text-center">
-                <div className="font-bold stat-number" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--brand-navy)', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>
+                <div className="font-semibold stat-number" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--brand-navy)', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>
                   {s.n}<span style={{ color: 'var(--brand-gold)', fontSize: '0.7em' }}>{s.s}</span>
                 </div>
                 <div style={{ fontSize: 'var(--font-size-label)', color: 'var(--muted-foreground)', marginTop: '4px', letterSpacing: '0.05em' }}>{s.l}</div>
@@ -86,7 +86,7 @@ const Index = () => {
           <Stagger stagger={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: 'var(--spacing-lg)' }}>
             {services.map((s) => (
               <HoverLift key={s.title}>
-                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', height: '100%' }}>
+                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: 'var(--spacing-2xl)', height: '100%' }}>
                   <div style={{ fontSize: '10px', color: 'var(--brand-blue)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-md)' }}>{s.tag}</div>
                   <div style={{ fontSize: '2rem', marginBottom: 'var(--spacing-md)' }}>{s.icon}</div>
                   <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-sm)', fontFamily: 'var(--font-serif)' }}>{s.title}</h3>
@@ -116,7 +116,7 @@ const Index = () => {
           <Stagger stagger={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: 'var(--spacing-md)' }}>
             {cases.map((c) => (
               <HoverLift key={c.title}>
-                <div className="service-card flex flex-col" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', height: '100%' }}>
+                <div className="service-card flex flex-col" style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: 'var(--spacing-xl)', height: '100%' }}>
                   <div className="flex items-center justify-between" style={{ marginBottom: 'var(--spacing-md)' }}>
                     <span style={{ fontSize: '1.8rem' }}>{c.icon}</span>
                     <span style={{ fontSize: '10px', fontWeight: 600, color: 'var(--brand-blue)', backgroundColor: 'var(--brand-ice)', padding: '3px 10px', borderRadius: '56px', letterSpacing: '0.1em' }}>{c.industry}</span>
@@ -159,7 +159,7 @@ const Index = () => {
           </FadeIn>
           <Stagger stagger={0.05} className="flex flex-wrap justify-center" style={{ gap: 'var(--spacing-md)' }}>
             {['橡胶制品企业', '医药化工企业', '汽车零部件企业', '文旅开发企业', '农业合作社', '政府及事业单位', '制造业企业', '新能源企业', '建筑施工单位'].map((name) => (
-              <div key={name} style={{ backgroundColor: 'var(--card)', borderRadius: '6px', padding: '8px 20px', border: '1px solid var(--border)', fontSize: 'var(--font-size-small)', color: 'var(--brand-navy)', fontFamily: 'var(--font-serif)' }}>{name}</div>
+              <div key={name} style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: '8px 20px', border: '1px solid var(--border)', fontSize: 'var(--font-size-small)', color: 'var(--brand-navy)', fontFamily: 'var(--font-serif)' }}>{name}</div>
             ))}
           </Stagger>
         </div>
@@ -181,11 +181,11 @@ const Index = () => {
               <Link to="/about" className="pill-btn pill-btn-primary">了解更多</Link>
             </FadeIn>
             <FadeIn variants={fadeUp} delay={0.2}>
-              <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden' }}>
+              <div style={{ position: 'relative', borderRadius: '0px', overflow: 'hidden' }}>
                 <img src="./assets/team_meeting.png" alt="天信专业团队" style={{ width: '100%', height: 'auto', display: 'block' }} />
                 <div className="absolute bottom-0 left-0 right-0" style={{ background: 'linear-gradient(transparent, rgba(0,51,141,0.85))', padding: 'var(--spacing-2xl)' }}>
-                  <div style={{ fontSize: 'var(--font-size-label)', color: 'oklch(0.95 0.005 250)', fontFamily: 'var(--font-serif)' }}>天台天信 · 专业团队</div>
-                  <div style={{ fontSize: 'var(--font-size-small)', color: 'oklch(0.70 0.01 250)' }}>TIANXIN CPA · SINCE 2001</div>
+                  <div style={{ fontSize: 'var(--font-size-label)', color: '#ffffff', fontFamily: 'var(--font-serif)' }}>天台天信 · 专业团队</div>
+                  <div style={{ fontSize: 'var(--font-size-small)', color: 'rgba(255,255,255,0.70)' }}>TIANXIN CPA · SINCE 2001</div>
                 </div>
               </div>
             </FadeIn>
@@ -197,11 +197,10 @@ const Index = () => {
       <section style={{ padding: 'var(--spacing-3xl) 0' }}>
         <div className="container" style={{ maxWidth: '1200px' }}>
           <FadeIn>
-            <div className="text-center" style={{ background: 'linear-gradient(135deg, oklch(0.30 0.12 260) 0%, oklch(0.24 0.10 255) 100%)', borderRadius: '8px', padding: 'var(--spacing-3xl)', position: 'relative', overflow: 'hidden' }}>
-              <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, oklch(0.62 0.13 75 / 0.05) 0%, transparent 60%)' }} />
+            <div className="text-center" style={{ background: 'var(--brand-navy)', borderRadius: '0px', padding: 'var(--spacing-3xl)', position: 'relative', overflow: 'hidden' }}>
               <div className="relative">
-                <h2 className="font-semibold" style={{ fontSize: 'var(--font-size-headline)', color: 'oklch(0.97 0.005 250)', lineHeight: 1.3, marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>需要专业咨询？</h2>
-                <p style={{ fontSize: 'var(--font-size-body)', color: 'oklch(0.70 0.01 250)', marginBottom: 'var(--spacing-xl)', maxWidth: '500px', marginInline: 'auto' }}>
+                <h2 className="font-semibold" style={{ fontSize: 'var(--font-size-headline)', color: '#ffffff', lineHeight: 1.3, marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>需要专业咨询？</h2>
+                <p style={{ fontSize: 'var(--font-size-body)', color: 'rgba(255,255,255,0.70)', marginBottom: 'var(--spacing-xl)', maxWidth: '500px', marginInline: 'auto' }}>
                   点击"联系我们"，获取政府网短号、手机号、座机及邮箱等全部联系方式
                 </p>
                 <div className="flex flex-wrap justify-center" style={{ gap: 'var(--spacing-md)' }}>

@@ -209,7 +209,7 @@ const News = () => {
         <section style={{ padding: 'var(--spacing-3xl) 0' }}>
           <div className="container" style={{ maxWidth: '800px' }}>
             <FadeIn>
-              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)' }}>
+              <div style={{ backgroundColor: 'var(--card)', borderRadius: '0px' }}>
                 <div style={{ fontSize: 'var(--font-size-body)', color: 'var(--foreground)', lineHeight: 2, fontFamily: 'var(--font-serif)', whiteSpace: 'pre-line' }}>{selectedArticle.content}</div>
               </div>
               <div style={{ marginTop: 'var(--spacing-xl)', textAlign: 'center' }}>
@@ -239,8 +239,8 @@ const News = () => {
         <div className="container relative" style={{ maxWidth: '1200px' }}>
           <FadeIn variants={fadeUp} style={{ maxWidth: '680px' }}>
             <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 600, marginBottom: 'var(--spacing-sm)', letterSpacing: '0.15em' }}>INDUSTRY INSIGHTS</div>
-            <h1 className="font-semibold" style={{ fontSize: 'clamp(2rem, 4vw, var(--font-size-headline))', color: 'oklch(0.98 0.005 250)', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>政策解读 · 行业洞察</h1>
-            <p style={{ fontSize: 'var(--font-size-body)', color: 'oklch(0.70 0.01 250)', marginTop: 'var(--spacing-md)', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>聚焦天台产业特色，分享专业观点与实务经验</p>
+            <h1 className="font-semibold" style={{ fontSize: 'clamp(2rem, 4vw, var(--font-size-headline))', color: '#ffffff', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>政策解读 · 行业洞察</h1>
+            <p style={{ fontSize: 'var(--font-size-body)', color: 'rgba(255,255,255,0.70)', marginTop: 'var(--spacing-md)', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>聚焦天台产业特色，分享专业观点与实务经验</p>
           </FadeIn>
         </div>
       </section>
@@ -263,7 +263,7 @@ const News = () => {
           <Stagger key={activeCategory} stagger={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: 'var(--spacing-lg)' }}>
             {filteredArticles.map((article) => (
               <HoverLift key={article.id}>
-                <div className="service-card flex flex-col" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', height: '100%', cursor: 'pointer' }} onClick={() => setSelectedArticle(article)}>
+                <div className="service-card flex flex-col" style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: 'var(--spacing-xl)', height: '100%', cursor: 'pointer' }} onClick={() => setSelectedArticle(article)}>
                   <div className="flex items-center" style={{ gap: 'var(--spacing-sm)', marginBottom: 'var(--spacing-md)' }}>
                     <span style={{ fontSize: 'var(--font-size-small)', fontWeight: 600, color: categoryColors[article.category] || 'var(--brand-navy)', backgroundColor: 'var(--brand-ice)', padding: '4px 12px', borderRadius: '56px' }}>{article.category}</span>
                     <span style={{ fontSize: 'var(--font-size-small)', color: 'var(--muted-foreground)' }}>{article.date}</span>

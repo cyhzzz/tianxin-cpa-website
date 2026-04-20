@@ -30,10 +30,10 @@ const Contact = () => {
             <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 600, marginBottom: 'var(--spacing-sm)', letterSpacing: '0.15em' }}>
               CONTACT US
             </div>
-            <h1 className="font-semibold" style={{ fontSize: 'clamp(2rem, 4vw, var(--font-size-headline))', color: 'oklch(0.98 0.005 250)', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>
+            <h1 className="font-semibold" style={{ fontSize: 'clamp(2rem, 4vw, var(--font-size-headline))', color: '#ffffff', lineHeight: 1.2, fontFamily: 'var(--font-serif)' }}>
               期待与您合作
             </h1>
-            <p style={{ fontSize: 'var(--font-size-body)', color: 'oklch(0.70 0.01 250)', marginTop: 'var(--spacing-md)', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>
+            <p style={{ fontSize: 'var(--font-size-body)', color: 'rgba(255,255,255,0.70)', marginTop: 'var(--spacing-md)', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>
               一通电话，开启专业服务之旅
             </p>
           </FadeIn>
@@ -63,7 +63,7 @@ const Contact = () => {
                     className="service-card"
                     style={{
                       backgroundColor: 'var(--card)',
-                      borderRadius: '8px',
+                      borderRadius: '0px',
                       padding: 'var(--spacing-lg)',
                       border: '1px solid var(--border)',
                       textDecoration: 'none',
@@ -79,14 +79,14 @@ const Contact = () => {
               </div>
 
               {/* Quick Action — flex:1 to stretch */}
-              <div style={{ background: 'linear-gradient(135deg, var(--brand-navy) 0%, #001a4d 100%)', borderRadius: '8px', padding: 'var(--spacing-2xl)', textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+              <div style={{ background: 'var(--brand-navy)', borderRadius: '0px', padding: 'var(--spacing-2xl)', textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'white', marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>
                   专业咨询，即刻开始
                 </h3>
                 <p style={{ fontSize: 'var(--font-size-label)', color: 'rgba(255,255,255,0.70)', marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)' }}>
                   无论您需要审计、评估还是税务服务，一通电话即可获得专业指导
                 </p>
-                <a href="tel:057683886633" className="pill-btn inline-block" style={{ backgroundColor: 'var(--brand-gold)', color: 'white', fontSize: 'var(--font-size-label)', fontWeight: 700, border: 'none' }}>
+                <a href="tel:057683886633" className="pill-btn inline-block" style={{ backgroundColor: 'var(--brand-gold)', color: 'white', fontSize: 'var(--font-size-label)', fontWeight: 600, border: 'none' }}>
                   立即咨询
                 </a>
               </div>
@@ -96,7 +96,7 @@ const Contact = () => {
             {/* Right: Address Card + Service Areas */}
             <FadeIn variants={fadeUp} delay={0.2}>
               {/* Address & Map Link */}
-              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)', marginBottom: 'var(--spacing-xl)' }}>
+              <div style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)', marginBottom: 'var(--spacing-xl)' }}>
                 <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-xs)' }}>ADDRESS</div>
                 <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>办公地址</h3>
                 <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--muted-foreground)', lineHeight: 1.8, marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)' }}>
@@ -107,7 +107,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="service-card inline-flex items-center cursor-pointer"
-                  style={{ backgroundColor: 'var(--brand-ice)', borderRadius: '8px', padding: 'var(--spacing-lg)', border: '1px solid var(--border)', textDecoration: 'none', gap: 'var(--spacing-md)' }}
+                  style={{ backgroundColor: 'var(--brand-ice)', borderRadius: '0px', padding: 'var(--spacing-lg)', border: '1px solid var(--border)', textDecoration: 'none', gap: 'var(--spacing-md)' }}
                 >
                   <span style={{ fontSize: '1.5rem' }}>📍</span>
                   <div>
@@ -118,7 +118,7 @@ const Contact = () => {
               </div>
 
               {/* Service Areas */}
-              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)' }}>
+              <div style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)' }}>
                 <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: 'var(--spacing-xs)' }}>
                   SERVICE AREA
                 </div>
@@ -139,9 +139,9 @@ const Contact = () => {
               </div>
 
               {/* Working Hours */}
-              <div style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)', marginTop: 'var(--spacing-xl)' }}>
+              <div style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: 'var(--spacing-2xl)', border: '1px solid var(--border)', marginTop: 'var(--spacing-xl)' }}>
                 <div className="flex items-center" style={{ gap: 'var(--spacing-md)' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: 'var(--brand-ice)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '0px', backgroundColor: 'var(--brand-ice)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}>
                     🕐
                   </div>
                   <div>
@@ -171,8 +171,8 @@ const Contact = () => {
               { step: '04', title: '交付成果', desc: '按约定时间交付报告，提供后续跟踪支持' },
             ].map((item) => (
               <HoverLift key={item.step}>
-                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '8px', padding: 'var(--spacing-xl)', textAlign: 'center', height: '100%' }}>
-                  <div style={{ fontSize: '2rem', color: 'var(--brand-gold)', fontWeight: 700, fontFamily: 'var(--font-serif)', marginBottom: 'var(--spacing-sm)' }}>{item.step}</div>
+                <div className="service-card" style={{ backgroundColor: 'var(--card)', borderRadius: '0px', padding: 'var(--spacing-xl)', textAlign: 'center', height: '100%' }}>
+                  <div style={{ fontSize: '2rem', color: 'var(--brand-gold)', fontWeight: 600, fontFamily: 'var(--font-serif)', marginBottom: 'var(--spacing-sm)' }}>{item.step}</div>
                   <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-navy)', marginBottom: 'var(--spacing-xs)', fontFamily: 'var(--font-serif)' }}>{item.title}</h3>
                   <p style={{ fontSize: 'var(--font-size-small)', color: 'var(--muted-foreground)', lineHeight: 1.6 }}>{item.desc}</p>
                 </div>
@@ -211,7 +211,7 @@ const FAQ = () => {
     <FadeIn>
       <div className="flex flex-col" style={{ gap: 'var(--spacing-sm)' }}>
         {faqs.map((faq, idx) => (
-          <div key={idx} style={{ backgroundColor: 'var(--card)', borderRadius: '8px', border: '1px solid var(--border)', overflow: 'hidden' }}>
+          <div key={idx} style={{ backgroundColor: 'var(--card)', borderRadius: '0px', border: '1px solid var(--border)', overflow: 'hidden' }}>
             <button onClick={() => setOpenIdx(openIdx === idx ? null : idx)} className="flex items-center justify-between w-full cursor-pointer" style={{ padding: 'var(--spacing-lg)', textAlign: 'left', background: 'none', border: 'none' }}>
               <span style={{ fontSize: 'var(--font-size-body)', color: 'var(--brand-navy)', fontWeight: 500, fontFamily: 'var(--font-serif)', flex: 1 }}>{faq.q}</span>
               <span style={{ color: 'var(--brand-blue)', fontSize: '1.2rem', transition: 'transform 0.2s', transform: openIdx === idx ? 'rotate(180deg)' : 'none', flexShrink: 0, marginLeft: 'var(--spacing-md)' }}>▼</span>
