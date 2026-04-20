@@ -112,7 +112,7 @@ const Contact = () => {
                   <span style={{ fontSize: '1.5rem' }}>📍</span>
                   <div>
                     <div className="font-semibold" style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-navy)', fontFamily: 'var(--font-serif)' }}>在百度地图中查看</div>
-                    <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-sky)' }}>点击导航前往 ↗</div>
+                    <div style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-blue)' }}>点击导航前往 ↗</div>
                   </div>
                 </a>
               </div>
