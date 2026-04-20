@@ -130,7 +130,7 @@
 
   --brand-navy: #00338d;
   --brand-blue: #4589ff;
-  --brand-sky: #4589ff;
+  --brand-sky: var(--brand-blue);
   --brand-gold: #b8860b;
   --brand-ice: #f4f4f4;
 
