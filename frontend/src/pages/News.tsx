@@ -270,7 +270,7 @@ const News = () => {
                   </div>
                   <h3 className="font-semibold" style={{ fontSize: 'var(--font-size-title)', color: 'var(--brand-navy)', lineHeight: 1.4, marginBottom: 'var(--spacing-md)', fontFamily: 'var(--font-serif)' }}>{article.title}</h3>
                   <p style={{ fontSize: 'var(--font-size-label)', color: 'var(--muted-foreground)', lineHeight: 1.7, flex: 1, fontFamily: 'var(--font-serif)' }}>{article.summary}</p>
-                  <div style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-sky)', fontWeight: 500, marginTop: 'var(--spacing-lg)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                  <div style={{ fontSize: 'var(--font-size-label)', color: 'var(--brand-blue)', fontWeight: 500, marginTop: 'var(--spacing-lg)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                     onMouseEnter={(e) => { e.currentTarget.style.gap = '8px'; }} onMouseLeave={(e) => { e.currentTarget.style.gap = '4px'; }}>
                     阅读全文 →
                   </div>
