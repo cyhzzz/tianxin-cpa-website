@@ -280,7 +280,7 @@
 }
 .tag-blue {
   background: #edf5ff;
-  color: #4589ff;
+  color: var(--brand-blue);
 }
 .tag-gold {
   background: #fef7e0;
