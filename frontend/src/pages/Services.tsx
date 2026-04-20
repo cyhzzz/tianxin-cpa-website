@@ -79,7 +79,7 @@ const Services = () => {
                       <div className="section-divider" style={{ margin: 'var(--spacing-md) auto 0', marginLeft: 0 }} />
                       <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--muted-foreground)', lineHeight: 1.8, marginBottom: 'var(--spacing-lg)', fontFamily: 'var(--font-serif)' }}>{service.desc}</p>
                       {/* Local note */}
-                      <div style={{ backgroundColor: 'var(--brand-ice)', borderRadius: '6px', padding: 'var(--spacing-md)', borderLeft: '3px solid var(--brand-gold)', marginBottom: 'var(--spacing-lg)' }}>
+                      <div style={{ backgroundColor: 'var(--brand-ice)', borderRadius: '6px', padding: 'var(--spacing-md)', marginBottom: 'var(--spacing-lg)' }}>
                         <div style={{ fontSize: '10px', color: 'var(--brand-gold)', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '4px' }}>TIANXIN ADVANTAGE</div>
                         <p style={{ fontSize: 'var(--font-size-small)', color: 'var(--brand-navy)', lineHeight: 1.7, fontFamily: 'var(--font-serif)' }}>{service.localNote}</p>
                       </div>
